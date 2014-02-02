@@ -112,7 +112,7 @@ openssh-server
     echo "Downloading debian minimal ..."
     debootstrap --verbose --variant=minbase --arch=$arch \
 	--include $packages \
-	"$SUITE" "$cache/partial-$SUITE-$arch" http://ftp.debian.org/debian
+	"$SUITE" "$cache/partial-$SUITE-$arch" http://archive.debian.org/debian
     if [ $? -ne 0 ]; then
 	echo "Failed to download the rootfs, aborting."
 	return 1
